@@ -1,0 +1,54 @@
+<!doctype html> 
+<html> 
+ <head>
+ 	<title> Mainpage </title>
+ 	<link rel="stylesheet" type="text/css" href="style.css">
+ </head>
+ <body>
+ 	<header>
+ 		<a href="a" class="logo"><img src="whitelogo.png" width="100px"> </a>
+ 		 <ul>
+ 			<li><a href="Index.html" class="active">Home</a></li>
+ 			<li><a href="Product.html">Product</a></li>
+ 			<li><a href="Service.html">Service</a></li>
+ 		 </ul>
+ 	 </header>
+ 	 <section>
+ 	 	<img src="stars.png" id ="stars">
+ 	 	<img src="moon.png" id ="moon">
+ 	 	<img src="mountains_behind.png" id ="mountains_behind">
+ 	 	<h2 id="text"> Fukuso </h2>
+ 	 	<a href="MoreProducts.html" id="btn">See more Products &#8594; </a>
+ 	 	<img src="mountains_front.png" id ="mountains_front">
+ 	 </section>
+ 	 <div class="sec" id = "sec">
+ 	 	<h2> Fukuso </h2>
+ 	 	<p> Flex your style with <br> another view of what Fukuso does, be comfortable with newly invented T-Shirt Cooler <br><br> T-shirts first entered pop culture in the 70s, which grew into popularity in the 1980s. It was also the time when a wrinkle-free t-shirt was born.<br><br>Currently, China and India are the two largest producers of cotton in the world, most of all, with nearly 60 million sales per year.<br><br> What is T-shirt ?? <br><br>A T-shirt, or tee shirt, is a style of fabric shirt named after the T shape of its body and sleeves. Traditionally, it has short sleeves and a round neckline, known as a crew neck, which lacks a collar. T-shirts are generally made of a stretchy, light, and inexpensive fabric and are easy to clean. The T-shirt evolved from undergarments used in the 19th century and, in the mid-20th century, transitioned from undergarment to general-use casual clothing.</p> 
+ 	 </div>
+
+ 	 <script>
+ 	 	let stars= document.getElementById('stars');
+ 	 	let moon= document.getElementById('moon');
+ 	 	let mountains_behind= document.getElementById('mountains_behind');
+ 	 	let text= document.getElementById('text');
+ 	 	let btn= document.getElementById('btn');
+ 	 	let mountains_front= document.getElementById('mountains_front');
+ 	 	let header = document.querySelector('header');
+
+
+ 	 	window.addEventListener('scroll', function(){
+ 	 		let value = window.scrollY;
+ 	 		stars.style.left = value * 0.25 + 'px';
+ 	 		moon.style.top = value * 1.5 + 'px';
+ 	 		mountains_behind.style.top = value * 0.5 + 'px';
+ 	 		mountains_front.style.top = value * 0 + 'px';
+ 	 		text.style.marginRight = value * 1.5 + 'px';
+ 	 		text.style.marginTop = value * 1.5 + 'px';
+ 	 		btn.style.marginTop = value * 1.5 + 'px';
+ 	 		header.style.top = value * 0.5 + 'px';
+ 	 	})
+ 	 </script>
+
+   </body>
+ </html>
+
